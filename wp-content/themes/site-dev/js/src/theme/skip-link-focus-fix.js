@@ -6,9 +6,7 @@
  * Learn more: https://github.com/Automattic/site.dev/pull/136
  */
 ( function() {
-    console.log('added from desktop2');
-    console.log('added from desktop2');
-    console.log('added from desktop2');
+    //spencer was here
 	var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 	    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
 	    is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
