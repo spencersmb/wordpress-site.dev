@@ -5,12 +5,15 @@ var sass        = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var rename = require("gulp-rename");
+var jshint = require('gulp-jshint');
+var concat = require('gulp-concat');
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
     //watch files
     var files = [
         './style.css',
+        './js/theme.js',
         './*.php'
     ];
 
@@ -44,7 +47,20 @@ gulp.task('sass', function(){
         .pipe(reload({stream:true}));
 });
 
+gulp.task('js', function () {
+
+    gulp.src('js/src/**/*.js')
+
+        .pipe(jshint())
+
+        .pipe(concat('theme.js'))
+
+        .pipe(gulp.dest('js/'));
+
+});
+
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function () {
+gulp.task('default', ['sass', 'browser-sync', 'js'], function () {
+    gulp.watch("js/src/**/*.js", ['js']);
     gulp.watch("sass/**/*.scss", ['sass']);
 });
