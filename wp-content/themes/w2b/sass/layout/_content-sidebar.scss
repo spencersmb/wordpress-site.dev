@@ -1,0 +1,218 @@
+.content-area {
+	float: left;
+	margin: 0 (-$size__site-sidebar) 0 0;
+	width: $size__site-main;
+}
+
+.site-main {
+	margin: 0 $size__site-sidebar 0 0;
+}
+
+.site-content .widget-area {
+	float: right;
+	overflow: hidden;
+	width: $size__site-sidebar;
+}
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+}
+
+body{
+  margin-top:50px;
+  font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+  font-size: 16px;
+  background: url('/wp-content/themes/w2b/assets/images/tile.jpg') top left repeat;
+}
+
+section{
+  padding:80px 0;
+}
+
+.section-header{
+  text-align: center;
+
+  h2{
+    margin:20px 0 40px;
+  }
+
+  h3{
+    margin: 30px 0 10px;
+  }
+}
+
+section.main-content {
+  padding: 40px 0;
+}
+
+#primary {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.feature-image {
+  display: table;
+  width: 100%;
+}
+
+.feature-image-default {
+  background: url('/wp-content/themes/w2b/assets/images/stuff-feature.jpg') no-repeat;
+  background-size: cover;
+}
+
+.feature-image-default-alt {
+  background: url('/wp-content/themes/w2b/assets/images/hipster-stuff.jpg') no-repeat;
+  background-size: cover;
+}
+
+.feature-image h1 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+
+
+img{
+  max-width: 100%;
+}
+
+.modal-content{
+  background: url('/wp-content/themes/w2b/assets/images/tile.jpg') top left repeat;
+}
+
+.badge{
+  &.social{
+    background: #ccc;
+    font-size: 24px;
+    height:40px;
+    width:40px;
+    text-align: center;
+    line-height: 42px;
+    margin: 0 5px 20px 0;
+    padding: 0;
+    @include border-radius(50px);
+    color:white;
+
+    &.twitter{
+      &:hover{
+        background: #55acee;
+      }
+    }
+
+    &.facebook{
+      &:hover{
+        background: #3b5998;
+      }
+    }
+
+    &.gplus{
+      &:hover{
+        background: #db4b39;
+      }
+    }
+  }
+}
+
+.modal-dialog{
+  z-index: 1080;
+}
+
+#who-benefits{
+  background-color: white;
+}
+
+#instructor{
+  background: white url('/wp-content/themes/w2b/assets/images/brad-elvis.png') 90% -10px no-repeat;
+
+  h2{
+    margin:0 0 20px;
+  }
+
+  .num{
+    @include font-size(2);
+    font-weight: $font-weight--bold;
+    color:white;
+    height:140px;
+    width:140px;
+    text-align: center;
+    background: #dd5638;
+    @include border-radius(100%);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    display: table;
+
+    span{
+      display:block;
+      font-weight: normal;
+      @include font-size(2);
+    }
+
+    .num-content{
+      //parent must be table
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.row{
+  &+ .row{
+    //looks for rows inside of rows
+    margin-top:20px;
+  }
+}
+
+.resource {
+  width: 31.33333333%;
+  float: left;
+  margin: 0 3% 40px 0;
+}
+
+.resource:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width : 991px) {
+  #instructor .container {
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .logo {
+    width: 50%;
+  }
+
+  #optin p {
+    margin: 0 0 10px;
+  }
+
+  #featurette iframe {
+    height: 240px;
+  }
+
+  .resource {
+    width: 48%;
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width : 568px) {
+  #instructor .num {
+    height: 100px;
+    width: 100px;
+    font-size: 22px;
+  }
+
+  #instructor .num span {
+    font-size: 16px;
+  }
+
+  .resource {
+    width: 100%;
+    margin-right: 0;
+  }
+}

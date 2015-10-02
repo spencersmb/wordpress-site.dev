@@ -1,0 +1,27 @@
+//h1, h2, h3, h4, h5, h6 {
+//	clear: both;
+//}
+
+
+h1,h2,h3,h4,h5,h6{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-weight: $font-weight--bold;
+}
+
+h1{
+  font-size:48px;
+  font-size:4.8rem;
+}
+
+h1,h2{
+  margin: 0 0 40px;
+}
+
+h3{
+  margin:20px 0;
+}
+
+h4{
+  font-size:18px;
+}

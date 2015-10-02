@@ -1,0 +1,33 @@
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+blockquote{
+  padding:0;
+  border:none;
+  font-style: italic;
+  text-align: left;
+
+  cite{
+    display: block;
+    color:#777;
+    margin:15px 0 0 0;
+  }
+
+  &:before{
+    display: none;
+  }
+}

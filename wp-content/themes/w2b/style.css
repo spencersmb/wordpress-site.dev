@@ -1,0 +1,536 @@
+/*!
+Theme Name: site.dev
+Theme URI: http://underscores.me/
+Author: site.author
+Author URI: http://site.author.uri
+Description: site.description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: site-dev-slug
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+site.dev is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import url("http://fonts.googleapis.com/css?family=Raleway:400,700");
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-weight: 700; }
+
+h1 {
+  font-size: 48px;
+  font-size: 4.8rem; }
+
+h1, h2 {
+  margin: 0 0 40px; }
+
+h3 {
+  margin: 20px 0; }
+
+h4 {
+  font-size: 18px; }
+
+a:link, a:visited {
+  color: #dd5638; }
+
+a:hover {
+  text-decoration: none;
+  color: #c9302c; }
+
+a.btn {
+  color: white; }
+
+p {
+  margin: 0 0 15px; }
+  p .lead {
+    font-weight: normal; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button, input, .btn, a.btn {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility; }
+
+button.btn:focus {
+  outline: none !important; }
+
+.btn {
+  font-weight: 700; }
+  .btn-danger {
+    background-color: #dd5638;
+    border-collapse: #d95131; }
+  .btn-success {
+    background: #79b044;
+    border: none; }
+    .btn-success:hover {
+      background: #6a9b3d;
+      border-color: #6a9b3d; }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: block; } }
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table; }
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */ }
+  .widget select {
+    max-width: 100%; }
+
+/* Search widget. */
+.widget_search .search-submit {
+  display: none; }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 1.5em; }
+
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-caption .wp-caption-text {
+    margin: 0.8075em 0; }
+
+.wp-caption-text {
+  text-align: center; }
+
+blockquote {
+  padding: 0;
+  border: none;
+  font-style: italic;
+  text-align: left; }
+  blockquote cite {
+    display: block;
+    color: #777;
+    margin: 15px 0 0 0; }
+  blockquote:before {
+    display: none; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%; }
+
+.site-main {
+  margin: 0 25% 0 0; }
+
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%; }
+
+.site-footer {
+  clear: both;
+  width: 100%; }
+
+body {
+  margin-top: 50px;
+  font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+  font-size: 16px;
+  background: url("/wp-content/themes/w2b/assets/images/tile.jpg") top left repeat; }
+
+section {
+  padding: 80px 0; }
+
+.section-header {
+  text-align: center; }
+  .section-header h2 {
+    margin: 20px 0 40px; }
+  .section-header h3 {
+    margin: 30px 0 10px; }
+
+section.main-content {
+  padding: 40px 0; }
+
+#primary {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.feature-image {
+  display: table;
+  width: 100%; }
+
+.feature-image-default {
+  background: url("/wp-content/themes/w2b/assets/images/stuff-feature.jpg") no-repeat;
+  background-size: cover; }
+
+.feature-image-default-alt {
+  background: url("/wp-content/themes/w2b/assets/images/hipster-stuff.jpg") no-repeat;
+  background-size: cover; }
+
+.feature-image h1 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white; }
+
+img {
+  max-width: 100%; }
+
+.modal-content {
+  background: url("/wp-content/themes/w2b/assets/images/tile.jpg") top left repeat; }
+
+.badge.social {
+  background: #ccc;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 42px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  border-radius: 50px;
+  background-clip: padding-box;
+  color: white; }
+  .badge.social.twitter:hover {
+    background: #55acee; }
+  .badge.social.facebook:hover {
+    background: #3b5998; }
+  .badge.social.gplus:hover {
+    background: #db4b39; }
+
+.modal-dialog {
+  z-index: 1080; }
+
+#who-benefits {
+  background-color: white; }
+
+#instructor {
+  background: white url("/wp-content/themes/w2b/assets/images/brad-elvis.png") 90% -10px no-repeat; }
+  #instructor h2 {
+    margin: 0 0 20px; }
+  #instructor .num {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    height: 140px;
+    width: 140px;
+    text-align: center;
+    background: #dd5638;
+    border-radius: 100%;
+    background-clip: padding-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    display: table; }
+    #instructor .num span {
+      display: block;
+      font-weight: normal;
+      font-size: 32px;
+      font-size: 2rem; }
+    #instructor .num .num-content {
+      display: table-cell;
+      vertical-align: middle; }
+
+.row + .row {
+  margin-top: 20px; }
+
+.resource {
+  width: 31.33333333%;
+  float: left;
+  margin: 0 3% 40px 0; }
+
+.resource:nth-child(3n) {
+  margin-right: 0; }
+
+@media screen and (max-width: 991px) {
+  #instructor .container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px; } }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 50%; }
+  #optin p {
+    margin: 0 0 10px; }
+  #featurette iframe {
+    height: 240px; }
+  .resource {
+    width: 48%;
+    margin-right: 2%; } }
+
+@media screen and (max-width: 568px) {
+  #instructor .num {
+    height: 100px;
+    width: 100px;
+    font-size: 22px; }
+  #instructor .num span {
+    font-size: 16px; }
+  .resource {
+    width: 100%;
+    margin-right: 0; } }

@@ -1,0 +1,480 @@
+/*********************************************************
+
+Project Name: Website Bootstrap boilerplate
+Project Description:
+File Name: Master Sass file
+Author: Spencer Bigum, Casey Jardin
+Author URL:
+Version: 1.0.0
+
+*********************************************************/
+@import url("http://fonts.googleapis.com/css?family=Raleway:400,700");
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.wba-img-replace {
+  /* replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.container-wb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 .75rem;
+}
+@media (max-width: 480px) {
+  .container-wb {
+    padding: 0;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.bold-helvetica {
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.gradient-top {
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0, transparent 100%);
+  z-index: 0;
+  height: 200px;
+  top: 0;
+}
+
+.gradient-bottom {
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0, transparent 100%);
+  z-index: 0;
+  height: 200px;
+  bottom: 0;
+}
+
+.gradient-bottom-projects {
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0, transparent 100%);
+  z-index: 0;
+  height: 33%;
+  bottom: 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 12px;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: none;
+  border-radius: 6px;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  outline: none;
+  border: none;
+  background: #aaa;
+}
+
+form.search-form .form-group {
+  margin: 0;
+}
+
+form.search-form .input-group {
+  width: 100%;
+}
+
+form.search-form .input-group input[type="search"],
+form.search-form .input-group input[type="text"] {
+  width: 70%;
+}
+
+form.search-form .input-group input[type="submit"] {
+  width: 30%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  float: right;
+}
+
+form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+#hero {
+  background: url("../images/hero-bg.jpg") 50% 0 repeat fixed;
+  min-height: 500px;
+  padding: 40px 0;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+#hero .hero-text {
+  margin-top: 30px;
+}
+#hero article {
+  width: 100%;
+  text-align: center;
+}
+
+#price-timeline {
+  margin: 30px 0 60px;
+  text-align: center;
+}
+#price-timeline .price {
+  display: inline-block;
+  margin: 0 2% 0 0;
+  width: 30%;
+  background: #3e4249;
+  padding: 10px 20px 30px;
+  position: relative;
+  vertical-align: top;
+}
+#price-timeline .price.active {
+  background: #dd5638;
+}
+#price-timeline .price span {
+  background: #101010;
+  display: block;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-weight: 700;
+  font-size: 24px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-clip: padding-box;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  margin-left: -35px;
+}
+#price-timeline h4 {
+  margin: 0 0 10px;
+}
+#price-timeline h4 small {
+  color: white;
+  font-weight: 700;
+  display: block;
+}
+
+#optin {
+  background: #3e4249;
+  padding: 20px 0;
+  color: white;
+  font-size: 21px;
+  font-size: 1.5rem;
+}
+#optin p {
+  margin: 7px 0 0 0;
+}
+
+#who-benefits {
+  background: white;
+}
+
+#course-features {
+  background: #3e4249;
+  color: white;
+  text-align: center;
+}
+
+i.ci {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url("../images/icon-sprite.png") no-repeat;
+}
+i.ci.ci-computer {
+  background-position: 0 0;
+}
+i.ci.ci-watch {
+  background-position: -40px 0;
+}
+i.ci.ci-calendar {
+  background-position: -80px 0;
+}
+i.ci.ci-community {
+  background-position: -120px 0;
+}
+i.ci.ci-instructor {
+  background-position: -160px 0;
+}
+i.ci.ci-device {
+  background-position: -200px 0;
+}
+
+#project-features {
+  text-align: center;
+}
+
+#featurette {
+  background: url("../images/stuff-bg.jpg") 50% 100% repeat fixed;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+#kudos {
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 60px;
+}
+.testimonial img {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+#signup {
+  text-align: center;
+  background: url("../images/hipster-stuff.jpg") 50% 100% repeat fixed;
+  background-size: cover;
+  color: white;
+  padding: 140px 0;
+}
+#signup h2 {
+  font-weight: normal;
+}
+#signup h2 strong {
+  border-bottom: solid 2px #dd5638;
+}
+#signup .btn {
+  font-size: 24px;
+  font-size: 1.7142857rem;
+}
+
+footer {
+  background: #3e4249;
+  color: white;
+  padding: 20px 0 10px;
+  font-size: 16px;
+  font-size: 1.1428571rem;
+}
+footer p {
+  margin: 0;
+}
+footer a:link, footer a:visited {
+  color: white;
+}
+footer a:hover {
+  color: #dd5638;
+}
+footer .signup-link a {
+  color: #dd5638;
+}
+footer .signup-link a:hover {
+  font-weight: 700;
+}
+
+.post, .widget, #comments {
+  position: relative;
+  border: solid 1px #ddd;
+  background: white;
+  margin: 0 0 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.post header,
+.post .post-excerpt,
+.post .post-body,
+#comments .comments-wrap {
+  padding: 20px;
+}
+
+.post header h3 {
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  border-bottom: solid 1px #ddd;
+}
+
+.post header h1 {
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  border-bottom: solid 1px #ddd;
+  font-size: 24px;
+}
+
+.post-image {
+  height: auto;
+}
+
+.post-details {
+  font-size: 12px;
+  width: 90%;
+}
+
+.post-details i.fa {
+  padding-left: 10px;
+}
+
+.post-details i.fa:first-child {
+  padding: 0;
+}
+
+.post-comments-badge {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border: none;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: #79b044;
+  text-align: center;
+  display: table;
+}
+
+.post-comments-badge a {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.post-comments-badge i.fa {
+  display: block;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.post-comments-badge:hover {
+  background-color: #8bc653;
+}
+
+#comments h3 {
+  text-align: center;
+}
+
+#comments h4 {
+  font-size: 1.3em;
+}
+
+#comments ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comments ol li {
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 20px;
+  margin: 10px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px rgba(0, 0, 0, 0.03);
+}
+
+#comments ol li ol.children {
+  padding: 0;
+  list-style: none;
+  font-size: 0.96em;
+}
+
+#leave-comment {
+  margin: 40px 0 0;
+  padding: 20px 0 0;
+  border-top: solid 1px #eee;
+}
+
+.widget {
+  padding: 20px;
+}
+
+.widget h4 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: solid 1px #ddd;
+}
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget ul li {
+  margin: 0 0 5px;
+}
+
+.widget ul li:hover {
+  position: relative;
+  left: 1px;
+}

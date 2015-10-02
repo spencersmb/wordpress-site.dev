@@ -1,0 +1,76 @@
+@import "colors";
+@import "typography";
+@import "structure";
+
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--Raleway: 'http://fonts.googleapis.com/css?family=Raleway:400,700';
+$font-family--primary    : 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font: $font-family--primary;
+
+// Font Weights
+
+//$font-weight--thin: 100;
+//$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$letter-space: 1px;
+
+// Descriptive Base Colors
+
+$white             : #fff;
+$black             : #0b0b0b;
+$grey              : #797e83;
+$green             : #79b044;
+$salmon            : #dd5638;
+$blue-gray         : #3e4249;
+
+// Color Usage
+
+//$primary-color     : $cinnabar;
+//$secondary-color   : $fiord;
+//$third-color       : $boston-blue;
+
+$link-hover        : palettes(grey);
+$shadow-color      : rgba($black, .2);
+
+
+
+//color palette modifiers
+//dual Nested array
+$palettes: (
+
+        grey: (
+                xx-light: lighten($grey,43%),
+                x-light: lighten($grey,35%),
+                light: lighten($grey,12%),
+                base: $grey,
+                dark: darken($grey, 8%),
+                x-dark: darken($grey, 16%)
+        ),
+        black:(
+                light: lighten($black, 10%),
+                base: $black,
+                dark: darken($black, 10%)
+        )
+
+);
+
+
+// //color map
+// //single nested array
+// $ui-colors:(
+// 	default: $fountain-blue,
+// 	success: $emerald,
+// 	error: $sunglo,
+// 	warning: $coral,
+// 	info: $purple
+// 	);
+
+
+$base__font-size: 16px; //was 16
+$base__line: 24px; //was 24
